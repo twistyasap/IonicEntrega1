@@ -1,0 +1,31 @@
+ion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+  }
+  
+  ion-card img {
+    width: 180px;
+    height: 180px;
+    
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 100%;            
+    margin-top: 30%;
+
+    ion-button {
+      --background: green;  
+      --color: white;       
+    }
+  }

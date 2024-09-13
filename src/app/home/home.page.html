@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    
+  </ion-header>
+  <ion-card>
+    <img src="/assets/img/mario.gif" alt="Logo" />
+    <ion-card-header>
+      <ion-card-title>Iniciar sesion</ion-card-title>
+      <ion-card-subtitle>Verificacion asistencia</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Inicia sesion para escanear el codigo QR
+    </ion-card-content>
+  </ion-card>
+  
+  
+  <ion-content padding>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user.username" name="id" required #id="ngModel"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="id.invalid && (id.dirty || id.touched)">
+        <p>El ID es requerido</p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password" name="password" required #password="ngModel"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+        <p>La contraseña es requerida</p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label>
+          <a [routerLink]="['/contrasena']">¿Olvidaste tu contraseña?</a>
+        </ion-label>
+      </ion-item>
+
+      <div class="button-container">
+        <ion-button size="default" (click)="navigateToRegister()">Registrarse</ion-button>
+        <ion-button size="default" (click)="navigateToLogin()" [disabled]="loginForm.invalid">Iniciar sesión</ion-button>
+      </div>
+    </form>
+    
+  </ion-content>
+  
+
+  
+</ion-content>

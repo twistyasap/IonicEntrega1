@@ -1,0 +1,31 @@
+.content-container {
+    display: flex;
+    flex-direction: column;      
+    justify-content: center;    
+    align-items: center;         
+    height: 100%;                 
+    padding: 20px;             
+  }
+  
+  .logo-image {
+    width: 150px;               
+    height: auto;               
+    margin-bottom: 150px;         
+  }
+  .welcome-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--ion-color-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .welcome-user {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ion-color-medium);
+  }

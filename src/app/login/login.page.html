@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Asistencia</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">Ramos  </ion-content>
+</ion-menu>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      
+      <div class="welcome-container">
+        <h1 class="welcome-title">Bienvenido :</h1>
+        <h1 class="welcome-user">{{ username }}</h1>
+      </div>
+      
+      <div class="content-container">
+       
+        <img #bouncingImage src="assets/img/toad.gif"  class="logo-image">
+
+        
+        <div class="button-container">
+          <ion-button (click)="presentAlert()">Abrir Cámara</ion-button>
+        </div>
+      </div>
+    </ion-content>
+  </div>
+
+  <!-- Definición de la alerta -->
+  <ion-alert
+    id="camera-alert"
+    header="Debes dar acceso a tu cámara"
+    [buttons]="alertButtons"
+  ></ion-alert>
+</ion-content>
